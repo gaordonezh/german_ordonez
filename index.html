@@ -164,11 +164,11 @@
         <article class="contact_items">
             <div class="form">
                 <p>Contact me to work on your project.</p>
-                <form action="#!" method="post" autocomplete="off">
-                    <input type="text" id="name" name="name" required placeholder="Your Full Name">
-                    <input type="email" id="name" name="name" required placeholder="Your Email">
-                    <input type="text" id="name" name="name" required placeholder="Your Phone">
-                    <textarea name="" id="" rows="5" placeholder="Your Message" required></textarea>
+                <form id="myForm" method="post" autocomplete="off">
+                    <input type="text" id="from_name" name="from_name" required placeholder="Your Full Name">
+                    <input type="email" id="from_email" name="from_email" required placeholder="Your Email">
+                    <input type="text" id="from_cel" name="from_cel" required placeholder="Your Phone">
+                    <textarea id="from_message" name="from_message" rows="5" placeholder="Your Message" required></textarea>
                     <button type="submit">Send</button>
                 </form>
             </div>
@@ -238,6 +238,41 @@
         gtag('js', new Date());
         gtag('config', 'UA-178733884-1');
     </script>
+
+
+
+
+
+
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>  
+		<script>
+		//EMAIL JS ENVIAR CORREOS
+			$(document).ready(function(){
+			emailjs.init("user_maXFpBrVpkWDWuTwec2wO"); 
+			});
+			var myform = $("form#myform");
+			myform.submit(function(event){
+			event.preventDefault();
+			var params = myform.serializeArray().reduce(function(obj, item) {
+				obj[item.name] = item.value;
+				return obj;
+			}, {});
+			// Change to your service ID, or keep using the default service
+			var service_id = "default_service";
+			var template_id = "template_6eDjDuip";
+			myform.find("button").text("Enviando ...");
+			emailjs.send(service_id, template_id, params)
+				.then(function(){ 
+				alert("Mensaje enviado con exito.");
+				window.location = "https://gaordonezh.github.io/german_ordonez/";
+				myform.find("button").text("Send");
+				}, function(err) {
+				alert("Error al enviar el mensaje!\r\n Error:\n " + JSON.stringify(err));
+				myform.find("button").text("Send");
+				});
+			return false;});
+		</script>
 
 </body>
 </html>
