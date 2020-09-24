@@ -24,7 +24,8 @@ header{
     display: grid;
     grid-template-columns: 0.2fr 1fr;
     width: 100%;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.25);
+    z-index: 2;
 }
 .nav .nav__icon {
     opacity: 0;
@@ -110,12 +111,13 @@ header{
     align-self: flex-start;
     padding: 5vw;
     min-height: 80vh;
-    background: url(../img/pc_night.png) center / cover, linear-gradient(#000, #33ccff30);
+    background: url('../img/teotihuancan.png') center / cover, linear-gradient(#000, #33ccff25);
     background-blend-mode: screen;
 }
 .hero h1{
     font-size: 5vw;
     color: var(--texto_color);
+    z-index: 2;
 }
 .hero h1:hover{
     background: -webkit-linear-gradient(var(--color_primario), #f2f2f2);
@@ -129,6 +131,7 @@ header{
     font-weight: 300;
     letter-spacing: 1px;
     max-width: 55%;
+    z-index: 2;
 }
 /*=========================================
                 PROJECTS
@@ -161,8 +164,8 @@ footer h2 span{
     display: grid;
     grid-template-columns: repeat(4, minmax(200px, 400px));
     justify-content: center;
-    grid-row-gap: 50px;
-    grid-column-gap: 25px;
+    grid-row-gap: 0;
+    grid-column-gap: 20px;
 }
 .projects_items .project_item{
     text-align: center;
@@ -209,38 +212,38 @@ footer h2 span{
     border-radius: 20px;
 }
 .bgf:nth-child(1){
-    background: url('../img/udemy.png') center / cover, #00000075;
-    background-size: 75% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.bgf:nth-child(2){
-    background: url('../img/edteam.png') center / cover, #00000075;
-    background-size: 75% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.bgf:nth-child(3){
-    background: url('../img/ucan.png') center / cover, #00000075;
-    
-    background-size: 75% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.bgf:nth-child(4){
-    background: url('../img/platzi.png') center / cover, #00000075;
-    background-size: 75% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.bgf:nth-child(5){
     background: url('../img/ucci.png') center / cover, #00000075;
     background-size: 75% auto;
     background-repeat: no-repeat;
     background-position: center;
 }
-.bgf:nth-child(6){
+.bgf:nth-child(2){
     background: url('../img/uth.png') center / cover, #00000075;
+    background-size: 75% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bgf:nth-child(3){
+    
+    background: url('../img/udemy.png') center / cover, #00000075;
+    background-size: 75% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bgf:nth-child(4){
+    background: url('../img/edteam.png') center / cover, #00000075;
+    background-size: 75% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bgf:nth-child(5){
+    background: url('../img/ucan.png') center / cover, #00000075;
+    background-size: 75% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bgf:nth-child(6){
+    background: url('../img/platzi.png') center / cover, #00000075;
     background-size: 75% auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -444,6 +447,7 @@ form button{
     bottom: 35%;
     background-color: rgba(0,0,0,0.5);
     border-radius: 20px 0 0 20px;
+    z-index: 3;
 }
 .social .link{
     height: 2vw;

@@ -8,6 +8,7 @@
     opacity: 1;
     background-color: rgba(0,0,0,0.75);
     transition: .5s ease-in-out;
+    z-index: 3;
 }
 .nav_open .nav__icon{
     visibility: visible;
