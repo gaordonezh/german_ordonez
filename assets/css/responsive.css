@@ -107,7 +107,7 @@
     }
     #services .services_items{
         display: grid;
-        grid-template-columns: repeat(3, minmax(200px, 400px));
+        grid-template-columns: repeat(2, minmax(200px, 400px));
         grid-gap: 10px;
     }
     footer .contact_items{
@@ -254,6 +254,11 @@
     #services .services_items{
         grid-template-columns: repeat(1, minmax(200px, 400px));
         grid-gap: 10px;
+    }
+    .service_item figure{
+        padding: 2.5vw;
+        height: 15vw;
+        width: 15vw;
     }
     .service_item h4{
         font-size: 3vw;

@@ -342,7 +342,7 @@ footer h2 span{
 }
 #services .services_items{
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 400px));
+    grid-template-columns: repeat(2, minmax(200px, 400px));
     justify-content: center;
     grid-gap: 20px;
 }
@@ -353,10 +353,42 @@ footer h2 span{
     color: var(--texto_color);
     text-align: center;
 }
-.service_item figure img{
-    width: 10vw;
-    height: 10vw;
-    border-radius: 50%;
+.service_item figure{
+    width: 50%;
+    margin: 0 auto;
+    padding: 1vw;
+    height: 7.5vw;
+    width: 7.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.service_item figure::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--color_primario);
+    transition: .5s;    
+}
+.service_item figure:hover::after{
+    border: 2px solid var(--color_primario);
+    transform: rotate(45deg);
+    transition: .5s;
+}
+.service_item figure svg{
+    fill: var(--texto_color);
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    transition: 1s;
+}
+.service_item figure:hover svg{
+    fill: var(--color_primario);
+    transition: 1s;
 }
 .service_item h4{
     margin: 20px 0 13px 0;
