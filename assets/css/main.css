@@ -472,7 +472,6 @@ form button{
     color: var(--texto_color);
     letter-spacing: 1px;
 }
-
 .social{
     position: fixed;
     right: 0;
@@ -491,6 +490,7 @@ form button{
     display: flex;
     justify-content: center;
     background: var(--texto_color);
+    transition: .5s;
 }
 .social .link:hover,
 .social .link:hover a svg{
