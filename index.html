@@ -169,7 +169,7 @@
                     <input type="email" id="from_email" name="from_email" required placeholder="Your Email">
                     <input type="text" id="from_cel" name="from_cel" required placeholder="Your Phone">
                     <textarea id="from_message" name="from_message" rows="5" placeholder="Your Message" required></textarea>
-                    <button>Send_</button>
+                    <button class="btn tm-btn-submit tm-btn ml-auto">Send_</button>
                 </form>
             </div>
             <div class="info">
@@ -248,7 +248,7 @@
         emailjs.send(service_id, template_id, params)
             .then(function(){ 
                 alert("Mensaje enviado con exito.");
-                window.location = "https://gaordonezh.github.io/german_ordonez/";
+                window.location = "https://gordonez.vercel.app/";
                 myform.find("button").text("Send");
             }, function(err) {
                 alert("Error al enviar el mensaje!\r\n Error:\n " + JSON.stringify(err));
