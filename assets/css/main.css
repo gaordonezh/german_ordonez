@@ -175,6 +175,7 @@ footer h2 span{
     position: relative;
     transition: .5s;
 }
+
 .project_item:hover figure::after{
     content: '';
     position: absolute;
@@ -182,9 +183,50 @@ footer h2 span{
     left: 0;
     right: 0;
     bottom: 0;
-    
     transform: scale(1.05);
     transition: .5s;
+    background-color: rgba(0,0,0,0.25);
+}
+.project_item figure h3::before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.project_item figure h3{
+    transition: 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.project_item figure p{
+    transition: 1s;
+    display: none;
+}
+.project_item figure:hover h3{
+    display: none;
+    transition: 1s;
+}
+.project_item figure:hover p{
+    transition: 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }
 .project_item figure img{
     max-width: 100%;
@@ -491,6 +533,15 @@ form button{
     border-radius: 10px;
     cursor: pointer;
     outline: none;
+    transition: .5s;
+}
+form div{
+    text-align: center;
+    margin: 10px auto 20px auto;
+}
+form button:hover{
+    box-shadow: 1px 1px 5px 1px rgba(255,255,255,0.25);
+    transition: .5s;
 }
 
 .contact_items .info{
