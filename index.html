@@ -244,10 +244,14 @@
             const serviceID = 'default_service';
             const templateID = 'template_6eDjDuip';
             emailjs.sendForm(serviceID, templateID, this).then(() => {
-                btn.value = 'Send Email';
-                alert('Sent!');
+                btn.value = 'Mensaje enviado';
+                alert('Mensaje enviado!');
+                document.getElementById('from_name').value = "";
+                document.getElementById('from_email').value = "";
+                document.getElementById('from_cel').value = "";
+                document.getElementById('from_message').value = "";
             }, (err) => {
-                btn.value = 'Send Email';
+                btn.value = 'Enviar Mensaje';
                 alert(JSON.stringify(err));
             });
         });
