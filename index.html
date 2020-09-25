@@ -7,8 +7,20 @@
     <link rel="shortcut icon" href="assets/img/flavicon.ico" type="image/x-icon">
     <meta name="keywords" content="Desarrollo Web, German Ordoñez, Portafolio German Ordoñez, German Aldo Ordoñez Hilario, Aldo Ordoñez">
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+         #particles-js{
+             content: '';
+             position: absolute;
+             top: 0;
+             left: 0;
+             bottom: 0;
+             right: 0;
+             z-index: 1;
+         }
+    </style>
 </head>
 <body>
+    <div id="particles-js"></div>
     <header>
         <nav id="nav" class="nav">
             <div class="nav__icon" id="nav_btn">
@@ -25,7 +37,7 @@
             </ul>
         </nav>  
     </header>
-    <section class="hero section" id="hero">
+    <section class="hero section"  id="hero">
         <h1>Hello World</h1>
         <h1>I'm German Ordoñez</h1>
         <p>Imagine, design, dream and create.</p>
@@ -291,7 +303,27 @@
         gtag('js', new Date());
         gtag('config', 'UA-178733884-1');
     </script>
-    
 
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+        var count_particles, stats, update;
+        stats = new Stats;
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        update = function() {
+          stats.begin();
+          stats.end();
+          if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+          }
+          requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    </script>
 </body>
 </html>
