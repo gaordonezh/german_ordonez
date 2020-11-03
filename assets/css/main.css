@@ -102,6 +102,10 @@ header{
     padding: 10px 25px;
     color: var(--texto_color);
     text-decoration: none;
+    font-weight: 600;
+}
+.nav ul li a:hover{
+    color: var(--color_primario);
 }
 /* HERO CONTENT */
 .hero{
@@ -600,8 +604,8 @@ form button:hover{
     fill: var(--color_primario);
 }
 .active{
-    border-bottom: 1px solid var(--color_primario);
-    color: var(--color_primario);
+    color: var(--color_primario) !important;
+    border-bottom: 2px solid var(--color_primario);
 }
 
 body::-webkit-scrollbar {
